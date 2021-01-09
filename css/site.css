@@ -139,6 +139,7 @@ em {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     grid-gap: 2rem;
+    padding: 3rem 0;
 }
 
 .polaroid-grid__container > .polaroid:nth-child(even) {
@@ -320,7 +321,10 @@ body.show-modal .modal {
     width: 100%;
     background-color: var(--grey-dark);
     margin: 0.5rem 0.5rem 0.5rem 0;
+    padding: 2rem;
 }
+
+/* sidebar */
 
 .sidebar {
     flex-grow: 1;
@@ -369,4 +373,15 @@ body.show-modal .modal {
 .sidebar-nav__item > img {
     width: 100%;
     height: auto;
+}
+
+/* categories */
+
+.category-filter {
+    color: #fff;
+}
+
+.category-title {
+    font-size: 1.25rem;
+    margin: 1rem 0;
 }

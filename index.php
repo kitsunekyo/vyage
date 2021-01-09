@@ -52,5 +52,5 @@
     </div>
 </div>
 
-<script src="js/landingpage.js"></script>
+<script src="js/landingpage.js" type="module"></script>
 <?php include('./app/partials/footer.php');
