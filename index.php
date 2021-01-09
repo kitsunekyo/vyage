@@ -24,6 +24,8 @@
         <section>
             <div class="polaroid-grid" id="landingpage-polaroid-grid">
                 <!-- render polaroid grid here via JS -->
+
+
                 <div class="polaroid">
                     <div class="polaroid__image">
                         <img src="/img/stock/travel_1.jpg" alt="travel pic">
@@ -41,6 +43,9 @@
                         </div>
                     </div>
                 </div>
+
+
+                
                 <div class="polaroid">
                     <div class="polaroid__image">
                         <img src="/img/stock/travel_1.jpg" alt="travel pic">

@@ -6,7 +6,7 @@
             "password": "1234",
             "email": "mandy89@live.com",
             "travelStatus": true,
-            "profilePic": "../images/uploads/person_1.jpg",
+            "profilePic": "/img/avatar/person_1.jpg",
             "bio": "Hey guys, Mandy1 here. Travel is my passion and I would love to explore the world with new travel buddies ",
             "top3Wishes": ["Costa Rica", "Marocco", "Mexico"],
             "top3Favs": ["Paris", "Barcelona", "Tokyo"],
@@ -19,7 +19,7 @@
                 {
                     "albumID": 3,
                     "albumTitle": "Exploring Morocco",
-                    "albumCoverImg": "../images/uploads/travel_18.jpg"
+                    "albumCoverImg": "/img/upload/travel_18.jpg"
                 }
             ]
         },
@@ -29,7 +29,7 @@
             "password": "kaj1234",
             "email": "travelGirl95@gmail.com",
             "travelStatus": true,
-            "profilePic": "../images/uploads/person_2.jpg",
+            "profilePic": "/img/avatar/person_2.jpg",
             "bio": "Hello, I'm writing a book about my travels and I've collected some moments from my journeys here!",
             "top3Wishes": ["Paris", "New York", "Costa Rica"],
             "top3Favs": ["Thailand", "Spain", "Morocco"],
@@ -66,7 +66,7 @@
                 {
                     "albumID": 2,
                     "albumTitle": "Island Hopping Greece",
-                    "albumCoverImg": "../images/uploads/travel_16.jpg"
+                    "albumCoverImg": "/img/upload/travel_16.jpg"
                 }
             ]
         },
@@ -76,7 +76,7 @@
             "password": "pinne1234",
             "email": "pinne@gmail.com",
             "travelStatus": false,
-            "profilePic": "../images/uploads/mePineiro.jpg",
+            "profilePic": "/img/avatar/mePineiro.jpg",
             "bio": "Hi there! I'm exploring the world with my dog Hugo. Come along!",
             "top3Wishes": false,
             "top3Favs": false,
@@ -114,7 +114,7 @@
             "password": "1234",
             "email": "sunislife@gmail.com",
             "travelStatus": true,
-            "profilePic": "../images/uploads/person_3.jpg",
+            "profilePic": "../images/upload/person_3.jpg",
             "bio": "Hej jag \u00e4r 20 v\u00e5rar och \u00e4lskar solen, den ger mig livsgl\u00e4dje. ",
             "top3Wishes": ["Los Angeles", "Bali", "Cuba"],
             "top3Favs": ["", "", ""],
@@ -123,7 +123,7 @@
                 {
                     "albumID": 1,
                     "albumTitle": "Living Costa Rica",
-                    "albumCoverImg": "../images/uploads/travel_6.jpg"
+                    "albumCoverImg": "../images/upload/travel_6.jpg"
                 }
             ]
         },
@@ -146,7 +146,7 @@
             "postID": 1,
             "creatorID": 1,
             "title": "Adventure in Cappadocia",
-            "coverImg": "../images/uploads/travel_1.jpg",
+            "coverImg": "/img/upload/travel_1.jpg",
             "images": [],
             "albumID": false,
             "country": "Turkey",
@@ -157,7 +157,7 @@
             "postID": 2,
             "creatorID": 1,
             "title": "Exploring Morocco",
-            "coverImg": "../images/uploads/travel_11.jpg",
+            "coverImg": "/img/upload/travel_11.jpg",
             "images": [],
             "albumID": 3,
             "country": "Morocco",
@@ -168,7 +168,7 @@
             "postID": 3,
             "creatorID": 2,
             "title": "\u00d6-hoppning i Grekland",
-            "coverImg": "../images/uploads/travel_12.jpg",
+            "coverImg": "/img/upload/travel_12.jpg",
             "images": [],
             "albumID": 2,
             "country": "Greece",
@@ -179,7 +179,7 @@
             "postID": 4,
             "creatorID": 3,
             "title": "Hugo och jag i Spanien",
-            "coverImg": "../images/uploads/travel_4.jpg",
+            "coverImg": "/img/upload/travel_4.jpg",
             "images": [],
             "albumID": false,
             "country": "Spain",
@@ -190,7 +190,7 @@
             "postID": 5,
             "creatorID": 3,
             "title": "Jag och bergen",
-            "coverImg": "../images/uploads/travel_2.jpg",
+            "coverImg": "/img/upload/travel_2.jpg",
             "images": [],
             "albumID": false,
             "country": "Italy",
@@ -201,7 +201,7 @@
             "postID": 6,
             "creatorID": 4,
             "title": "Backpacking i Costa Rica",
-            "coverImg": "../images/uploads/travel_14.jpg",
+            "coverImg": "/img/upload/travel_14.jpg",
             "images": [],
             "albumID": 1,
             "country": "Costa Rica",
@@ -212,7 +212,7 @@
             "postID": 7,
             "creatorID": 4,
             "title": "Vattenfall i Costa Rica",
-            "coverImg": "../images/uploads/travel_6.jpg",
+            "coverImg": "/img/upload/travel_6.jpg",
             "images": [],
             "albumID": 1,
             "country": "Costa Rica",
@@ -223,7 +223,7 @@
             "postID": 8,
             "creatorID": 2,
             "title": "New Island, New beach",
-            "coverImg": "../images/uploads/travel_16.jpg",
+            "coverImg": "/img/upload/travel_16.jpg",
             "images": [],
             "albumID": 2,
             "country": "Greece",
@@ -234,7 +234,7 @@
             "postID": 9,
             "creatorID": 2,
             "title": "New York baby",
-            "coverImg": "../images/stockImages/travel_17.jpg",
+            "coverImg": "/img/stock/travel_17.jpg",
             "images": [],
             "albumID": false,
             "country": "USA",
@@ -245,7 +245,7 @@
             "postID": 10,
             "creatorID": 1,
             "title": "Tasting Morocco",
-            "coverImg": "../images/uploads/travel_18.jpg",
+            "coverImg": "/img/upload/travel_18.jpg",
             "images": [],
             "albumID": 3,
             "country": "Morocco",
@@ -256,7 +256,7 @@
             "postID": 11,
             "creatorID": 4,
             "title": "Safari i Zanzibar",
-            "coverImg": "../images/uploads/travel_19.jpg",
+            "coverImg": "/img/upload/travel_19.jpg",
             "images": [],
             "albumID": false,
             "country": "Tanzania",
@@ -267,7 +267,7 @@
             "postID": 12,
             "creatorID": 3,
             "title": "Vakna upp i Costa Rica",
-            "coverImg": "../images/uploads/travel_20.jpg",
+            "coverImg": "/img/upload/travel_20.jpg",
             "images": [],
             "albumID": false,
             "country": "Costa Rica",
