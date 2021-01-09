@@ -20,7 +20,7 @@
 
 :root,
 body {
-    min-height: 100%;
+    min-height: 100vh;
 }
 
 body {
@@ -65,9 +65,9 @@ em {
     border-radius: 50%;
     width: 50px;
     height: 50px;
-    display: grid;
-    place-items: center;
     font-size: 2rem;
+    display: grid;
+    place-content: center;
 }
 
 /* main nav */
@@ -304,4 +304,69 @@ body.show-modal .modal {
     background-color: #fafafa;
     display: block;
     width: 100%;
+}
+
+/* ----------- dashboard ----------- */
+.dashboard {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+}
+
+.dashboard > .main {
+    flex-grow: 1;
+    overflow: hidden;
+    border-radius: 1rem;
+    width: 100%;
+    background-color: var(--grey-dark);
+    margin: 0.5rem 0.5rem 0.5rem 0;
+}
+
+.sidebar {
+    flex-grow: 1;
+    width: 70px;
+    background-color: #fff;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    padding: 1rem 0.25rem;
+}
+
+.sidebar-nav {
+    margin-top: auto;
+}
+
+.sidebar-nav__item {
+    width: 45px;
+    height: 45px;
+    background-color: var(--grey-light);
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    border-radius: 50%;
+    padding: 0.5rem;
+    color: var(--text-color);
+    transition: background-color 0.1s ease;
+}
+
+.sidebar-nav__item:hover {
+    background-color: #cfcfcf;
+}
+
+.sidebar-nav__item:not(:last-child) {
+    margin-bottom: 1rem;
+}
+
+.sidebar-nav__item.sidebar-nav__item--active {
+    background-color: var(--color-primary);
+    color: #fff;
+}
+
+.sidebar-nav__item path {
+    stroke-width: 1.3px;
+}
+
+.sidebar-nav__item > img {
+    width: 100%;
+    height: auto;
 }
