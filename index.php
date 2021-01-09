@@ -122,14 +122,14 @@
             <div class="tabs__container">
                 <div class="tab login" data-tab="login">
                     <h2>Welcome to <em>Voyage</em></h2>
-                    <form>
+                    <form id="loginForm">
                         <div class="form-group">
                             <label for="username">Username</label>
-                            <input type="text" name="username" placeholder="Username" class="form-control">
+                            <input type="text" name="username" required placeholder="Username" class="form-control">
                         </div>
                         <div class="form-group">
                             <label for="password">Password</label>
-                            <input type="password" name="password" placeholder="Password" class="form-control">
+                            <input type="password" name="password" required placeholder="Password" class="form-control">
                         </div>
                         <div class="form-group">
                             <input type="submit" value="Login" class="button">

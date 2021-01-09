@@ -1,3 +1,25 @@
+class LoginForm {
+    constructor() {
+        const $loginForm = document.getElementById("loginForm");
+
+        $loginForm.addEventListener("submit", (e) => {
+            e.preventDefault();
+            this._handleSubmit($loginForm);
+        });
+    }
+
+    _handleSubmit($form) {
+        const formData = new FormData($form);
+        const username = formData.get("username");
+        const password = formData.get("password");
+        this._login({ username, password });
+    }
+
+    _login(credentials) {
+        console.log(credentials);
+    }
+}
+
 class Tabs {
     _$tabs;
     _$links;
@@ -69,5 +91,6 @@ class LandingPageModal {
     document.addEventListener("DOMContentLoaded", function (event) {
         const landingPageModal = new LandingPageModal();
         const modalTabs = new Tabs();
+        const loginForm = new LoginForm();
     });
 })();
