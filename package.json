@@ -1,0 +1,23 @@
+{
+  "name": "voyage",
+  "version": "1.0.0",
+  "description": "some description",
+  "main": "index.js",
+  "scripts": {
+    "start": "php -S localhost:8080"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kitsunekyo/voyage.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kitsunekyo/voyage/issues"
+  },
+  "homepage": "https://github.com/kitsunekyo/voyage#readme",
+  "devDependencies": {
+    "prettier": "^2.2.1"
+  }
+}

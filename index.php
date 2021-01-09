@@ -1,103 +1,144 @@
-<?php 
+<!DOCTYPE html>
+<html lang="en">
 
-    error_reporting(-1);
-    include "sections/header.php";
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700;800;900&family=Dancing+Script:wght@700&family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/site.css">
+    <title>Voyage</title>
+</head>
 
-?>
-        <div id="bgStart"></div>
-        <div id="startWrapper">
-
-            <!--Startsida overlay-->
-            <div id="bgDark"></div>
-            <div id="startModalWrapper">
-                <div id="close">x</div>
-                <div id="loginModal">
-
-                    <ul class="tabMenu">
-                        <li class="tab active"><p id="modalLoginBtn">Login</p></li>
-                        <li class="tab"><p id="modalJoinBtn">Join</a></li>
-                    </ul>
-
-                    <h1>Welcome to <span>Voyage</span></h1>
-
-                    <div class="tabContent">
-
-                        <!--LOGGA IN-->
-                        <div id="login">
-
-                            <form id="login" action="admin/login.php" method="POST">          
-                                <p class="formInputTitle">Username
-                                    <input type="text" name="username" placeholder="Username">
-                                </p>
-                                <p class="formInputTitle">Password
-                                    <input type="password" name="password" placeholder="Password">
-                                </p>
-
-                                <?php if (isset($_GET["error"])) { ?>
-                                    <script>
-                                        document.getElementById("bgDark").style.display = "block";
-                                        document.getElementById("startModalWrapper").style.display = "flex";
-                                        document.getElementById("loginModal").style.display = "flex";
-                                        document.getElementById("close").style.display = "block";
-                                    </script>
-                                <p class="error">Oh no, incorrect username or password. Please try again.</p>
-                                <?php } ?>
-
-                                <button type="submit">Login</button>
-                            </form>
-
-                        </div>
-
-                        <!--REGISTRERA-->
-                        <div id="join">
-                            <form id="register" action="/home.php" method="POST">
-                                <p id="errorRegister" class="error"></p>
-                                                
-                                <p class="formInputTitle">Username</p>
-                                <input id="newUsername" type="text" name="username" placeholder="New username"><br>
-                                <p class="formInputTitle">Email</p>
-                                <input id="newEmail" type="text" name="email" placeholder="Email address">
-                                <p class="formInputTitle">Password</p>
-                                <input id="newPassword" type="password" name="password" placeholder="New password"><br>
-                                <p class="formInputTitle">I'm interested in new travel friends</p>
-
-                                <label class="switch">
-                                    <input id="travelStatus" type="checkbox" name="travelStatus">
-                                    <span class="slider round"></span>
-                                </label>
-
-                                <button class="register" type="submit">Bon voyage!</button>
-                            </form>
-                        </div>
-
+<body class="show-overlay show-modal">
+    <div class="bg-landing"></div>
+    <header class="header">
+        <a class="logo" href="/">V</a>
+        <nav class="nav">
+            <a href="" class="nav__link">About</a>
+            <button class="button" data-modal-open="login">Login / Join</button>
+        </nav>
+    </header>
+    <main class="main">
+        <h1 class="hero-title">Collect your <em>travels</em> to inspire and be <em>inspired</em></h1>
+        <section>
+            <div class="polaroid-grid" id="landingpage-polaroid-grid">
+                <!-- render polaroid grid here via JS -->
+                <div class="polaroid">
+                    <div class="polaroid__image">
+                        <img src="/img/stock/travel_1.jpg" alt="travel pic">
                     </div>
-
+                    <div class="polaroid__meta">
+                        <div class="polaroid__user">
+                            <div class="polaroid__avatar">
+                                <img src="/img/avatar/person_1.jpg" alt="user-avatar">
+                            </div>
+                            <div class="polaroid__username">person_1</div>
+                        </div>
+                        <div class="polaroid__details">
+                            <h3>Indonesia</h3>
+                            <p>Some Post Title</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="polaroid">
+                    <div class="polaroid__image">
+                        <img src="/img/stock/travel_1.jpg" alt="travel pic">
+                    </div>
+                    <div class="polaroid__meta">
+                        <div class="polaroid__user">
+                            <div class="polaroid__avatar">
+                                <img src="/img/avatar/person_1.jpg" alt="user-avatar">
+                            </div>
+                            <div class="polaroid__username">person_1</div>
+                        </div>
+                        <div class="polaroid__details">
+                            <h3>Indonesia</h3>
+                            <p>Some Post Title</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="polaroid">
+                    <div class="polaroid__image">
+                        <img src="/img/stock/travel_1.jpg" alt="travel pic">
+                    </div>
+                    <div class="polaroid__meta">
+                        <div class="polaroid__user">
+                            <div class="polaroid__avatar">
+                                <img src="/img/avatar/person_1.jpg" alt="user-avatar">
+                            </div>
+                            <div class="polaroid__username">person_1</div>
+                        </div>
+                        <div class="polaroid__details">
+                            <h3>Indonesia</h3>
+                            <p>Some Post Title</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="polaroid">
+                    <div class="polaroid__image">
+                        <img src="/img/stock/travel_1.jpg" alt="travel pic">
+                    </div>
+                    <div class="polaroid__meta">
+                        <div class="polaroid__user">
+                            <div class="polaroid__avatar">
+                                <img src="/img/avatar/person_1.jpg" alt="user-avatar">
+                            </div>
+                            <div class="polaroid__username">person_1</div>
+                        </div>
+                        <div class="polaroid__details">
+                            <h3>Indonesia</h3>
+                            <p>Some Post Title</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="polaroid">
+                    <div class="polaroid__image">
+                        <img src="/img/stock/travel_1.jpg" alt="travel pic">
+                    </div>
+                    <div class="polaroid__meta">
+                        <div class="polaroid__user">
+                            <div class="polaroid__avatar">
+                                <img src="/img/avatar/person_1.jpg" alt="user-avatar">
+                            </div>
+                            <div class="polaroid__username">person_1</div>
+                        </div>
+                        <div class="polaroid__details">
+                            <h3>Indonesia</h3>
+                            <p>Some Post Title</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-
-            <!--nav på startsida-->
-            <nav class="flexCenter startNav">
-                <div class="logo">V</div>
-                <div id="links">
-                    <a href="/" class="navAboutBtn">About</a>
-                    <button id="navLoginBtn">Login/Join</button>
-                </div>
-            </nav>
-
-            <!--titel på startsidan-->
-            <div class="startTitle flexCenter">
-                <h1>Collect your <span>travels</span> to inspire and be <span>inspired</span></h1>
-            </div>
-
-            <!--polaroidGrid-->
-            <div id="startGrid"></div>
-        
-            <footer></footer>
+        </section>
+    </main>
+    <div class="overlay"></div>
+    <div class="modal">
+        <div class="tabs">
+            <a href="#" class="tab tab--active">Login</a>
+            <a href="#" class="tab">Join</a>
         </div>
+        <div class="login">
+            <h2>Welcome to <em>Voyage</em></h2>
+            <form>
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" name="username" placeholder="Username" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" name="password" placeholder="Password" class="form-control">
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Login" class="button">
+                </div>
+            </form>
+        </div>
+        <div class="signup" style="display: none;">
+            signup
+        </div>
+    </div>
+    <script src="js/index.js" type="module"></script>
+</body>
 
-        <script src='../js/classes.js'></script>
-        <script src='../js/adminArrays.js'></script>
-        <script src='../js/startGrid.js'></script>
-        <script src='../js/register.js'></script>
-    </body>
 </html>
