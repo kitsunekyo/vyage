@@ -69,8 +69,14 @@ class LoginForm {
         this._login({ username, password });
     }
 
-    _login(credentials) {
-        console.log(credentials);
+    async _login(credentials) {
+        await fetch("/app/auth/login.php", {
+            method: "POST",
+            body: credentials,
+            headers: {
+                "Content-Type": "application/json",
+            },
+        });
     }
 }
 
@@ -145,7 +151,7 @@ class LandingPageModal {
     document.addEventListener("DOMContentLoaded", function (event) {
         const landingPageModal = new LandingPageModal();
         const modalTabs = new Tabs();
-        const loginForm = new LoginForm();
+        // const loginForm = new LoginForm(); // not needed because sessions :(
         const polaroidGrid = new PolaroidGridComponent("landingpage-polaroid-grid");
     });
 })();

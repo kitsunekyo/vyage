@@ -1,3 +1,11 @@
+<?php
+session_start();
+var_dump($_SESSION);
+if ($_SESSION["username"]) {
+    // header("Location: /home.php");
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -24,96 +32,6 @@
         <section>
             <div class="polaroid-grid" id="landingpage-polaroid-grid">
                 <!-- render polaroid grid here via JS -->
-
-
-                <div class="polaroid">
-                    <div class="polaroid__image">
-                        <img src="/img/stock/travel_1.jpg" alt="travel pic">
-                    </div>
-                    <div class="polaroid__meta">
-                        <div class="polaroid__user">
-                            <div class="polaroid__avatar">
-                                <img src="/img/avatar/person_1.jpg" alt="user-avatar">
-                            </div>
-                            <div class="polaroid__username">person_1</div>
-                        </div>
-                        <div class="polaroid__details">
-                            <h3>Indonesia</h3>
-                            <p>Some Post Title</p>
-                        </div>
-                    </div>
-                </div>
-
-
-                
-                <div class="polaroid">
-                    <div class="polaroid__image">
-                        <img src="/img/stock/travel_1.jpg" alt="travel pic">
-                    </div>
-                    <div class="polaroid__meta">
-                        <div class="polaroid__user">
-                            <div class="polaroid__avatar">
-                                <img src="/img/avatar/person_1.jpg" alt="user-avatar">
-                            </div>
-                            <div class="polaroid__username">person_1</div>
-                        </div>
-                        <div class="polaroid__details">
-                            <h3>Indonesia</h3>
-                            <p>Some Post Title</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="polaroid">
-                    <div class="polaroid__image">
-                        <img src="/img/stock/travel_1.jpg" alt="travel pic">
-                    </div>
-                    <div class="polaroid__meta">
-                        <div class="polaroid__user">
-                            <div class="polaroid__avatar">
-                                <img src="/img/avatar/person_1.jpg" alt="user-avatar">
-                            </div>
-                            <div class="polaroid__username">person_1</div>
-                        </div>
-                        <div class="polaroid__details">
-                            <h3>Indonesia</h3>
-                            <p>Some Post Title</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="polaroid">
-                    <div class="polaroid__image">
-                        <img src="/img/stock/travel_1.jpg" alt="travel pic">
-                    </div>
-                    <div class="polaroid__meta">
-                        <div class="polaroid__user">
-                            <div class="polaroid__avatar">
-                                <img src="/img/avatar/person_1.jpg" alt="user-avatar">
-                            </div>
-                            <div class="polaroid__username">person_1</div>
-                        </div>
-                        <div class="polaroid__details">
-                            <h3>Indonesia</h3>
-                            <p>Some Post Title</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="polaroid">
-                    <div class="polaroid__image">
-                        <img src="/img/stock/travel_1.jpg" alt="travel pic">
-                    </div>
-                    <div class="polaroid__meta">
-                        <div class="polaroid__user">
-                            <div class="polaroid__avatar">
-                                <img src="/img/avatar/person_1.jpg" alt="user-avatar">
-                            </div>
-                            <div class="polaroid__username">person_1</div>
-                        </div>
-                        <div class="polaroid__details">
-                            <h3>Indonesia</h3>
-                            <p>Some Post Title</p>
-                        </div>
-                    </div>
-                </div>
             </div>
         </section>
     </main>
@@ -127,7 +45,7 @@
             <div class="tabs__container">
                 <div class="tab login" data-tab="login">
                     <h2>Welcome to <em>Voyage</em></h2>
-                    <form id="loginForm">
+                    <form id="loginForm" action="/app/auth/login.php" method="POST">
                         <div class="form-group">
                             <label for="username">Username</label>
                             <input type="text" name="username" required placeholder="Username" class="form-control">
