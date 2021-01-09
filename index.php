@@ -1,71 +1,56 @@
-<?php
-session_start();
-var_dump($_SESSION);
-if ($_SESSION["username"]) {
-    // header("Location: /home.php");
-}
+<?php include('./app/partials/head.php'); ?>
 
-?>
-<!DOCTYPE html>
-<html lang="en">
+<div class="bg-landing"></div>
+<header class="header">
+    <a class="logo" href="/">V</a>
+    <nav class="nav">
+        <a href="" class="nav__link">About</a>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700;800;900&family=Dancing+Script:wght@700&family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/site.css">
-    <title>Voyage</title>
-</head>
-
-<body>
-    <div class="bg-landing"></div>
-    <header class="header">
-        <a class="logo" href="/">V</a>
-        <nav class="nav">
-            <a href="" class="nav__link">About</a>
+        <?php if (!isset($_SESSION["userId"])) : ?>
             <button class="button" data-modal-open="login">Login / Join</button>
-        </nav>
-    </header>
-    <main class="main">
-        <h1 class="hero-title">Collect your <em>travels</em> to inspire and be <em>inspired</em></h1>
-        <section>
-            <div class="polaroid-grid" id="landingpage-polaroid-grid">
-                <!-- render polaroid grid here via JS -->
+        <?php else : ?>
+            <button class="button" id="logout">Logout</button>
+        <?php endif; ?>
+    </nav>
+</header>
+<main class="main">
+    <h1 class="hero-title">Collect your <em>travels</em> to inspire and be <em>inspired</em></h1>
+    <section>
+        <div class="polaroid-grid" id="landingpage-polaroid-grid">
+            <!-- render polaroid grid here via JS -->
+        </div>
+    </section>
+</main>
+<div class="overlay"></div>
+<div class="modal">
+    <div class="tabs">
+        <div class="tabs__header">
+            <a href="#" class="tab__header-link" data-tab-link="login">Login</a>
+            <a href="#" class="tab__header-link" data-tab-link="join">Join</a>
+        </div>
+        <div class="tabs__container">
+            <div class="tab login" data-tab="login">
+                <h2>Welcome to <em>Voyage</em></h2>
+                <form id="loginForm" action="/app/auth/login.php" method="POST">
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input type="text" name="username" required placeholder="Username" class="form-control" value="mandy1">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" name="password" required placeholder="Password" class="form-control" value="1234">
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Login" class="button">
+                    </div>
+                </form>
             </div>
-        </section>
-    </main>
-    <div class="overlay"></div>
-    <div class="modal">
-        <div class="tabs">
-            <div class="tabs__header">
-                <a href="#" class="tab__header-link" data-tab-link="login">Login</a>
-                <a href="#" class="tab__header-link" data-tab-link="join">Join</a>
-            </div>
-            <div class="tabs__container">
-                <div class="tab login" data-tab="login">
-                    <h2>Welcome to <em>Voyage</em></h2>
-                    <form id="loginForm" action="/app/auth/login.php" method="POST">
-                        <div class="form-group">
-                            <label for="username">Username</label>
-                            <input type="text" name="username" required placeholder="Username" class="form-control">
-                        </div>
-                        <div class="form-group">
-                            <label for="password">Password</label>
-                            <input type="password" name="password" required placeholder="Password" class="form-control">
-                        </div>
-                        <div class="form-group">
-                            <input type="submit" value="Login" class="button">
-                        </div>
-                    </form>
-                </div>
-                <div class="tab" style="display: none;" data-tab="join">
-                    signup
-                </div>
+            <div class="tab" style="display: none;" data-tab="join">
+                signup
             </div>
         </div>
     </div>
-    <script src="js/index.js" type="module"></script>
-</body>
+</div>
 
-</html>
+<script src="js/landingpage.js"></script>
+<?php include('./app/partials/footer.php');

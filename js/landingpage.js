@@ -9,24 +9,33 @@ class PolaroidGridComponent {
     }
 
     async _loadPosts() {
-        const res = await fetch("/app/db/db.json");
+        const res = await fetch("/app/api/posts.php");
         const data = await res.json();
-        const posts = data.posts;
+        const posts = data;
 
         this._render(posts);
     }
 
     _render(posts) {
         this._$root.innerHTML = "";
+
+        const grid = document.createElement("div");
+        grid.classList.add("polaroid-grid__container");
+
         const elements = posts.map((post) => this._createPolaroidEl(post));
+
         elements.forEach((element) => {
-            this._$root.appendChild(element);
+            grid.appendChild(element);
         });
+
+        this._$root.appendChild(grid);
     }
 
     _createPolaroidEl(polaroid) {
         const el = document.createElement("div");
         el.classList.add("polaroid");
+        const image = new Image();
+        image.src = polaroid.coverImg;
 
         // todo: get avatar url and use instead of polaroid.creatorID
 
@@ -120,28 +129,59 @@ class LandingPageModal {
     _$body;
 
     constructor() {
-        this._registerDOM();
+        this._registerLoginModal();
+    }
+}
+
+class Header {
+    _$body;
+
+    constructor() {
+        this._registerLoginButton();
+        this._registerLogoutButton();
     }
 
-    _registerDOM() {
+    async _logout() {
+        const res = await fetch("/app/auth/logout.php", {
+            method: "POST",
+        });
+        if (res.status === 200) {
+            location.reload();
+        }
+    }
+
+    _registerLogoutButton() {
+        const $logout = document.getElementById("logout");
+        if (!$logout) return;
+
+        $logout.addEventListener("click", (e) => {
+            e.preventDefault();
+            this._logout();
+        });
+    }
+
+    _registerLoginButton() {
         this._$body = document.querySelector("body");
+
+        const modalButton = document.querySelector('[data-modal-open="login"]');
+        if (!modalButton) return;
 
         document.querySelector('[data-modal-open="login"]').addEventListener("click", (e) => {
             e.preventDefault();
-            this.open();
+            this._openModal();
         });
 
         document.querySelector(".overlay").addEventListener("click", (e) => {
-            this.close();
+            this._closeModal();
         });
     }
 
-    open() {
+    _openModal() {
         this._$body.classList.add("show-overlay");
         this._$body.classList.add("show-modal");
     }
 
-    close() {
+    _closeModal() {
         this._$body.classList.remove("show-overlay");
         this._$body.classList.remove("show-modal");
     }
@@ -149,7 +189,7 @@ class LandingPageModal {
 
 (function () {
     document.addEventListener("DOMContentLoaded", function (event) {
-        const landingPageModal = new LandingPageModal();
+        const header = new Header();
         const modalTabs = new Tabs();
         // const loginForm = new LoginForm(); // not needed because sessions :(
         const polaroidGrid = new PolaroidGridComponent("landingpage-polaroid-grid");
