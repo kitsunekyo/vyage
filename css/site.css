@@ -240,9 +240,13 @@ body.show-modal .modal {
 
 /* tabs */
 .tabs {
+}
+.tabs__header {
     display: flex;
 }
-.tab {
+.tab__container {
+}
+.tab__header-link {
     width: 100%;
     height: 40px;
     display: flex;
@@ -250,14 +254,17 @@ body.show-modal .modal {
     justify-content: center;
     background-color: var(--grey-light);
 }
-.tab.tab--active {
+.tab__header-link.tab__header-link--active {
     background-color: #fff;
+}
+.tab {
+    display: none;
+    margin: 0 auto;
+    padding: 0 3rem 5rem;
 }
 
 /* login form */
 .login {
-    margin: 0 auto;
-    padding: 0 3rem 5rem;
 }
 
 .login h2 {

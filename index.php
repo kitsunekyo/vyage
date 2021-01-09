@@ -10,7 +10,7 @@
     <title>Voyage</title>
 </head>
 
-<body class="show-overlay show-modal">
+<body>
     <div class="bg-landing"></div>
     <header class="header">
         <a class="logo" href="/">V</a>
@@ -115,27 +115,31 @@
     <div class="overlay"></div>
     <div class="modal">
         <div class="tabs">
-            <a href="#" class="tab tab--active">Login</a>
-            <a href="#" class="tab">Join</a>
-        </div>
-        <div class="login">
-            <h2>Welcome to <em>Voyage</em></h2>
-            <form>
-                <div class="form-group">
-                    <label for="username">Username</label>
-                    <input type="text" name="username" placeholder="Username" class="form-control">
+            <div class="tabs__header">
+                <a href="#" class="tab__header-link" data-tab-link="login">Login</a>
+                <a href="#" class="tab__header-link" data-tab-link="join">Join</a>
+            </div>
+            <div class="tabs__container">
+                <div class="tab login" data-tab="login">
+                    <h2>Welcome to <em>Voyage</em></h2>
+                    <form>
+                        <div class="form-group">
+                            <label for="username">Username</label>
+                            <input type="text" name="username" placeholder="Username" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" name="password" placeholder="Password" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" value="Login" class="button">
+                        </div>
+                    </form>
                 </div>
-                <div class="form-group">
-                    <label for="password">Password</label>
-                    <input type="password" name="password" placeholder="Password" class="form-control">
+                <div class="tab" style="display: none;" data-tab="join">
+                    signup
                 </div>
-                <div class="form-group">
-                    <input type="submit" value="Login" class="button">
-                </div>
-            </form>
-        </div>
-        <div class="signup" style="display: none;">
-            signup
+            </div>
         </div>
     </div>
     <script src="js/index.js" type="module"></script>
