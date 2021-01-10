@@ -22,7 +22,7 @@
     </section>
 </main>
 <div class="overlay"></div>
-<div class="modal">
+<div class="modal" data-modal="login">
     <div class="tabs">
         <div class="tabs__header">
             <a href="#" class="tab__header-link" data-tab-link="login">Login</a>

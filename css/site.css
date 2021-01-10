@@ -226,10 +226,6 @@ em {
     opacity: 0.5;
 }
 
-body.show-overlay {
-    overflow: hidden;
-}
-
 body.show-overlay .overlay {
     display: block;
 }
@@ -247,10 +243,6 @@ body.show-overlay .overlay {
     margin: 0 auto;
     border-radius: 0.5rem;
     overflow: hidden;
-}
-
-body.show-modal .modal {
-    display: block;
 }
 
 /* tabs */

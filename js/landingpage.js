@@ -1,3 +1,4 @@
+import { Modal } from "./modules/modal.js";
 import { PolaroidGridComponent } from "./modules/polaroid-grid.js";
 
 class Tabs {
@@ -35,7 +36,6 @@ class Tabs {
 
 class Header {
     constructor() {
-        this.registerLoginButton();
         this.registerLogoutButton();
     }
 
@@ -57,37 +57,12 @@ class Header {
             this.logout();
         });
     }
-
-    registerLoginButton() {
-        this.$body = document.querySelector("body");
-
-        const modalButton = document.querySelector('[data-modal-open="login"]');
-        if (!modalButton) return;
-
-        document.querySelector('[data-modal-open="login"]').addEventListener("click", (e) => {
-            e.preventDefault();
-            this.openModal();
-        });
-
-        document.querySelector(".overlay").addEventListener("click", (e) => {
-            this.closeModal();
-        });
-    }
-
-    openModal() {
-        this.$body.classList.add("show-overlay");
-        this.$body.classList.add("show-modal");
-    }
-
-    closeModal() {
-        this.$body.classList.remove("show-overlay");
-        this.$body.classList.remove("show-modal");
-    }
 }
 
 (function () {
     document.addEventListener("DOMContentLoaded", function () {
         const header = new Header();
+        const loginModal = new Modal("login");
         const modalTabs = new Tabs();
         const polaroidGrid = new PolaroidGridComponent("landingpage-polaroid-grid");
     });

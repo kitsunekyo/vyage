@@ -20,6 +20,10 @@ $pathName = $_SERVER['REQUEST_URI'];
         </section>
     </div>
 </div>
+<div class="overlay"></div>
+<div class="modal" data-modal="create-post">
+    create post
+</div>
 
 <script src="/js/dashboard.js" type="module"></script>
 <?php include('./lib/partials/footer.php');
