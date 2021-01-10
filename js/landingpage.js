@@ -1,33 +1,5 @@
 import { PolaroidGridComponent } from "./polaroid-grid.js";
 
-class LoginForm {
-    constructor() {
-        const $loginForm = document.getElementById("loginForm");
-
-        $loginForm.addEventListener("submit", (e) => {
-            e.preventDefault();
-            this.handleSubmit($loginForm);
-        });
-    }
-
-    handleSubmit($form) {
-        const formData = new FormData($form);
-        const username = formData.get("username");
-        const password = formData.get("password");
-        this.login({ username, password });
-    }
-
-    async login(credentials) {
-        await fetch("/auth/login.php", {
-            method: "POST",
-            body: credentials,
-            headers: {
-                "Content-Type": "application/json",
-            },
-        });
-    }
-}
-
 class Tabs {
     $tabs;
     $links;
@@ -130,7 +102,6 @@ class Header {
     document.addEventListener("DOMContentLoaded", function (event) {
         const header = new Header();
         const modalTabs = new Tabs();
-        // const loginForm = new LoginForm(); // not needed because sessions :(
         const polaroidGrid = new PolaroidGridComponent("landingpage-polaroid-grid");
     });
 })();
