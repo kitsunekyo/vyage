@@ -10,7 +10,7 @@ switch($method) {
             header("Location: /?error=1");
         }
 
-        $db = db();
+        $db = getDb();
 
         $user = array_filter($db["users"], function ($v, $k) {
             return $v["username"] == $_POST["username"] && $v["password"] == $_POST["password"];

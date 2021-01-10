@@ -7,7 +7,7 @@ $method = $_SERVER["REQUEST_METHOD"];
 
 switch($method) {
     case 'GET':
-        $db = db();
+        $db = getDb();
         echo json_encode($db["users"]);
         break;
 }

@@ -1,5 +1,6 @@
 <?php 
 include('./lib/partials/head.php');
+$creatorID = $_SESSION["userId"];
 $pathName = $_SERVER['REQUEST_URI'];
 ?>
 
@@ -21,8 +22,31 @@ $pathName = $_SERVER['REQUEST_URI'];
     </div>
 </div>
 <div class="overlay"></div>
-<div class="modal" data-modal="create-post">
-    create post
+<div class="modal" data-modal="create-post" style="padding: 1rem;">
+    <form id="createPostForm">
+        <input type="hidden" name="creatorID" value="<?= $creatorID ?>">
+        <div class="form-group">
+            <label for="title">Title</label>
+            <input type="text" class="form-control" name="title">
+        </div>
+        <div class="form-group">
+            <label for="country">Country</label>
+            <select name="country"></select>
+        </div>
+        <div class="form-group">
+            <label for="category">Category</label>
+            <select name="category"></select>
+        </div>
+        <div class="form-group">
+            <label for="description">Description</label>
+            <textarea name="description"></textarea>
+        </div>
+        <input type="file" name="coverImg">
+        <input type="file" name="images[]" multiple>
+        <div class="form-group">
+            <input type="submit" value="Send" class="button">
+        </div>
+    </form>
 </div>
 
 <script src="/js/dashboard.js" type="module"></script>
