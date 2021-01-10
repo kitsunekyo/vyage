@@ -385,3 +385,45 @@ body.show-modal .modal {
     font-size: 1.25rem;
     margin: 1rem 0;
 }
+/* travel category nav */
+.category-nav {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.category-nav__item {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 0.5rem;
+    width: 110px;
+}
+
+.category-nav__item.category-nav__item--active {
+    background-color: var(--grey);
+}
+
+.category-nav__item:not(:last-child) {
+    /* margin-right: 1rem; */
+}
+
+.category-nav__item span {
+    margin-top: 0.5rem;
+    text-align: center;
+}
+
+.category-nav__icon img {
+    height: 100%;
+    width: auto;
+}
+
+.category-nav__icon {
+    width: 80px;
+    height: 80px;
+    background-color: #fff;
+    border-radius: 50%;
+    padding: 20%;
+}

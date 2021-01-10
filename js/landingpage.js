@@ -131,6 +131,6 @@ class Header {
         const header = new Header();
         const modalTabs = new Tabs();
         // const loginForm = new LoginForm(); // not needed because sessions :(
-        const polaroidGrid = new PolaroidGridComponent("landingpage-polaroid-grid", true);
+        const polaroidGrid = new PolaroidGridComponent("landingpage-polaroid-grid");
     });
 })();

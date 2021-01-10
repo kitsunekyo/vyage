@@ -4,16 +4,16 @@ export class PolaroidGridComponent {
     _$root;
     _isDemo = false;
 
-    constructor(rootId, isDemo = false) {
+    constructor(rootId, posts = []) {
         this._$root = document.getElementById(rootId);
         this._$root.innerHTML = "";
 
-        this._isDemo = isDemo;
+        this._isDemo = posts.length <= 0;
 
-        if (isDemo) {
+        if (this._isDemo) {
             this._getDemoPosts();
         } else {
-            this._loadPosts();
+            this._render(posts);
         }
     }
 
@@ -26,14 +26,6 @@ export class PolaroidGridComponent {
             };
         });
         this._render(data);
-    }
-
-    async _loadPosts() {
-        const res = await fetch("/app/api/posts.php");
-        const data = await res.json();
-        const posts = data;
-
-        this._render(posts);
     }
 
     _render(posts) {
@@ -60,8 +52,6 @@ export class PolaroidGridComponent {
         el.classList.add("polaroid");
         const image = new Image();
         image.src = polaroid.coverImg;
-
-        // todo: get avatar url and use instead of polaroid.creatorID
 
         el.innerHTML = `
             <div class="polaroid__image">

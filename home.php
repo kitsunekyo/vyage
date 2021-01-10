@@ -12,18 +12,7 @@ $pathName = $_SERVER['REQUEST_URI'];
         <section class="category-filter">
             <h3 class="category-title">Travel categories</h3>
             <nav class="category-nav">
-                <a href="#" class="category-nav__item">
-                    Backpacking
-                </a>
-                <a href="#" class="category-nav__item">
-                    Backpacking
-                </a>
-                <a href="#" class="category-nav__item">
-                    Backpacking
-                </a>
-                <a href="#" class="category-nav__item">
-                    Backpacking
-                </a>
+                <!-- render category nav here -->
             </nav>
         </section>
         <section class="posts">
