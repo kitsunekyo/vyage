@@ -6,10 +6,18 @@
             "password": "1234",
             "email": "mandy89@live.com",
             "travelStatus": true,
-            "profilePic": "/img/avatar/person_1.jpg",
+            "profilePic": "\/img\/avatar\/person_1.jpg",
             "bio": "Hey guys, Mandy1 here. Travel is my passion and I would love to explore the world with new travel buddies ",
-            "top3Wishes": ["Costa Rica", "Marocco", "Mexico"],
-            "top3Favs": ["Paris", "Barcelona", "Tokyo"],
+            "top3Wishes": [
+                "Costa Rica",
+                "Marocco",
+                "Mexico"
+            ],
+            "top3Favs": [
+                "Paris",
+                "Barcelona",
+                "Tokyo"
+            ],
             "savedPosts": [
                 {
                     "postID": "9"
@@ -19,7 +27,7 @@
                 {
                     "albumID": 3,
                     "albumTitle": "Exploring Morocco",
-                    "albumCoverImg": "/img/stock/travel_18.jpg"
+                    "albumCoverImg": "\/img\/stock\/travel_18.jpg"
                 }
             ]
         },
@@ -29,10 +37,18 @@
             "password": "kaj1234",
             "email": "travelGirl95@gmail.com",
             "travelStatus": true,
-            "profilePic": "/img/avatar/person_2.jpg",
+            "profilePic": "\/img\/avatar\/person_2.jpg",
             "bio": "Hello, I'm writing a book about my travels and I've collected some moments from my journeys here!",
-            "top3Wishes": ["Paris", "New York", "Costa Rica"],
-            "top3Favs": ["Thailand", "Spain", "Morocco"],
+            "top3Wishes": [
+                "Paris",
+                "New York",
+                "Costa Rica"
+            ],
+            "top3Favs": [
+                "Thailand",
+                "Spain",
+                "Morocco"
+            ],
             "savedPosts": [
                 {
                     "postID": "12"
@@ -66,7 +82,7 @@
                 {
                     "albumID": 2,
                     "albumTitle": "Island Hopping Greece",
-                    "albumCoverImg": "/img/stock/travel_16.jpg"
+                    "albumCoverImg": "\/img\/stock\/travel_16.jpg"
                 }
             ]
         },
@@ -76,7 +92,7 @@
             "password": "pinne1234",
             "email": "pinne@gmail.com",
             "travelStatus": false,
-            "profilePic": "/img/avatar/mePineiro.jpg",
+            "profilePic": "\/img\/avatar\/mePineiro.jpg",
             "bio": "Hi there! I'm exploring the world with my dog Hugo. Come along!",
             "top3Wishes": false,
             "top3Favs": false,
@@ -114,16 +130,24 @@
             "password": "1234",
             "email": "sunislife@gmail.com",
             "travelStatus": true,
-            "profilePic": "/img/avatar/person_3.jpg",
+            "profilePic": "\/img\/avatar\/person_3.jpg",
             "bio": "Hej jag \u00e4r 20 v\u00e5rar och \u00e4lskar solen, den ger mig livsgl\u00e4dje. ",
-            "top3Wishes": ["Los Angeles", "Bali", "Cuba"],
-            "top3Favs": ["", "", ""],
+            "top3Wishes": [
+                "Los Angeles",
+                "Bali",
+                "Cuba"
+            ],
+            "top3Favs": [
+                "",
+                "",
+                ""
+            ],
             "savedPosts": [],
             "album": [
                 {
                     "albumID": 1,
                     "albumTitle": "Living Costa Rica",
-                    "albumCoverImg": "../images/upload/travel_6.jpg"
+                    "albumCoverImg": "..\/images\/upload\/travel_6.jpg"
                 }
             ]
         },
@@ -141,5 +165,42 @@
             "album": []
         }
     ],
-    "posts": []
+    "posts": [
+        {
+            "postID": "5ffb216300515",
+            "creatorID": "1",
+            "title": "Some Post",
+            "country": "Italy",
+            "categoryID": null,
+            "description": "some description",
+            "coverImg": "\/uploads\/5ffb216300532.jpg"
+        },
+        {
+            "postID": "5ffb21e97508e",
+            "creatorID": "1",
+            "title": "Another day in the sun",
+            "country": "USA",
+            "categoryID": "3",
+            "description": "culture bro",
+            "coverImg": "\/uploads\/5ffb21e975090.jpeg"
+        },
+        {
+            "postID": "5ffb225110916",
+            "creatorID": "1",
+            "title": "new title",
+            "country": "Turkey",
+            "categoryID": "1",
+            "description": "asljkdf",
+            "coverImg": "\/uploads\/5ffb225110918.png"
+        },
+        {
+            "postID": "5ffb27f4ac0e6",
+            "creatorID": 1,
+            "title": "asdf",
+            "country": "Morocco",
+            "categoryID": 2,
+            "description": "asdf",
+            "coverImg": "\/uploads\/5ffb27f4ac128.jpeg"
+        }
+    ]
 }

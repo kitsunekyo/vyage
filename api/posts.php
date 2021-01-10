@@ -55,10 +55,10 @@ switch ($method) {
 
         $post = [
             "postID" => uniqid(),
-            "creatorID" => $_POST["creatorID"],
+            "creatorID" => intval($_POST["creatorID"]),
             "title" => $_POST["title"],
             "country" => $_POST["country"],
-            "categoryID" => $_POST["categoryID"],
+            "categoryID" => intval($_POST["categoryID"]),
             "description" => $_POST["description"],
         ];
 
@@ -73,6 +73,9 @@ switch ($method) {
         $db = getDb();
         array_push($db["posts"], $post);
         writeDb($db);
+
+        http_response_code(201);
+        echo json_encode($post);
 
         break;
 }
