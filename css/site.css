@@ -450,3 +450,8 @@ body.show-overlay .overlay {
 .category-nav__clear {
     margin: 1rem 0 0;
 }
+
+/* create new post modal */
+.create-new-post-modal {
+    width: 500px;
+}

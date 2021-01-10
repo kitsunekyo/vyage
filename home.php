@@ -23,7 +23,7 @@ $pathName = $_SERVER['REQUEST_URI'];
     </div>
 </div>
 <div class="overlay"></div>
-<div class="modal" data-modal="create-post" style="padding: 1rem;">
+<div class="modal create-new-post-modal" data-modal="create-post" style="padding: 1rem;">
     <h2>Create new Post</h2>
     <form id="createPostForm">
         <input type="hidden" name="creatorID" value="<?= $creatorID ?>">
