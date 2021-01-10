@@ -1,9 +1,6 @@
-import { PolaroidGridComponent } from "./polaroid-grid.js";
+import { PolaroidGridComponent } from "./modules/polaroid-grid.js";
 
 class Tabs {
-    $tabs;
-    $links;
-
     constructor() {
         this.$links = document.querySelectorAll("[data-tab-link]");
         this.$tabs = document.querySelectorAll("[data-tab]");
@@ -36,17 +33,7 @@ class Tabs {
     }
 }
 
-class LandingPageModal {
-    $body;
-
-    constructor() {
-        this.registerLoginModal();
-    }
-}
-
 class Header {
-    $body;
-
     constructor() {
         this.registerLoginButton();
         this.registerLogoutButton();
@@ -99,7 +86,7 @@ class Header {
 }
 
 (function () {
-    document.addEventListener("DOMContentLoaded", function (event) {
+    document.addEventListener("DOMContentLoaded", function () {
         const header = new Header();
         const modalTabs = new Tabs();
         const polaroidGrid = new PolaroidGridComponent("landingpage-polaroid-grid");

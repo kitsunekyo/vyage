@@ -1,8 +1,6 @@
 import { TRAVEL_CATEGORIES } from "./constants.js";
 
 export class TravelCategoryNav {
-    $root;
-
     constructor(selector) {
         this.$root = document.querySelector(selector);
         this.renderNav();

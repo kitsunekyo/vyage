@@ -1,9 +1,6 @@
 import { LANDINGPAGE_POLAROIDS, LANDINGPAGE_USERS } from "./constants.js";
 
 export class PolaroidGridComponent {
-    $root;
-    _isDemo = false;
-
     constructor(rootId, posts = []) {
         this.$root = document.getElementById(rootId);
         this.$root.innerHTML = "";

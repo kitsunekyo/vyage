@@ -1,8 +1,8 @@
-import { PolaroidGridComponent } from "./polaroid-grid.js";
-import { TravelCategoryNav } from "./travel-category-nav.js";
+import { PolaroidGridComponent } from "./modules/polaroid-grid.js";
+import { TravelCategoryNav } from "./modules/travel-category-nav.js";
 
 (function () {
-    document.addEventListener("DOMContentLoaded", function (event) {
+    document.addEventListener("DOMContentLoaded", function () {
         const travelCategoryNav = new TravelCategoryNav(".category-nav");
 
         fetch("/api/posts.php")
