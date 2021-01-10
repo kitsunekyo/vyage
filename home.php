@@ -1,10 +1,10 @@
 <?php 
-include('./app/partials/head.php');
+include('./lib/partials/head.php');
 $pathName = $_SERVER['REQUEST_URI'];
 ?>
 
 <div class="dashboard">
-    <?php include('./app/partials/sidebar.php') ?>
+    <?php include('./lib/partials/sidebar.php') ?>
     <div class="main">
         <secion class="search">
             <input type="text" class="form-control" placeholder="Search Posts">
@@ -22,4 +22,4 @@ $pathName = $_SERVER['REQUEST_URI'];
 </div>
 
 <script src="/js/dashboard.js" type="module"></script>
-<?php include('./app/partials/footer.php');
+<?php include('./lib/partials/footer.php');

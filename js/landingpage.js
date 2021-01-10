@@ -18,7 +18,7 @@ class LoginForm {
     }
 
     async login(credentials) {
-        await fetch("/app/auth/login.php", {
+        await fetch("/auth/login.php", {
             method: "POST",
             body: credentials,
             headers: {
@@ -81,7 +81,7 @@ class Header {
     }
 
     async logout() {
-        const res = await fetch("/app/auth/logout.php", {
+        const res = await fetch("/auth/logout.php", {
             method: "POST",
         });
         if (res.status === 200) {

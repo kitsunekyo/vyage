@@ -5,7 +5,7 @@ import { TravelCategoryNav } from "./travel-category-nav.js";
     document.addEventListener("DOMContentLoaded", function (event) {
         const travelCategoryNav = new TravelCategoryNav(".category-nav");
 
-        fetch("/app/api/posts.php")
+        fetch("/api/posts.php")
             .then((res) => res.json())
             .then((posts) => {
                 const polaroidGrid = new PolaroidGridComponent("posts-grid", posts);

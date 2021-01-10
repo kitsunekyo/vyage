@@ -1,4 +1,4 @@
-<?php include('./app/partials/head.php'); ?>
+<?php include('./lib/partials/head.php'); ?>
 
 <div class="bg-landing"></div>
 <header class="header">
@@ -31,7 +31,7 @@
         <div class="tabs__container">
             <div class="tab login" data-tab="login">
                 <h2>Welcome to <em>Voyage</em></h2>
-                <form id="loginForm" action="/app/auth/login.php" method="POST">
+                <form id="loginForm" action="/auth/login.php" method="POST">
                     <div class="form-group">
                         <label for="username">Username</label>
                         <input type="text" name="username" required placeholder="Username" class="form-control" value="mandy1">
@@ -53,4 +53,4 @@
 </div>
 
 <script src="js/landingpage.js" type="module"></script>
-<?php include('./app/partials/footer.php');
+<?php include('./lib/partials/footer.php');
