@@ -1,23 +1,23 @@
 import { LANDINGPAGE_POLAROIDS, LANDINGPAGE_USERS } from "./constants.js";
 
 export class PolaroidGridComponent {
-    _$root;
+    $root;
     _isDemo = false;
 
     constructor(rootId, posts = []) {
-        this._$root = document.getElementById(rootId);
-        this._$root.innerHTML = "";
+        this.$root = document.getElementById(rootId);
+        this.$root.innerHTML = "";
 
         this._isDemo = posts.length <= 0;
 
         if (this._isDemo) {
-            this._getDemoPosts();
+            this.getDemoPosts();
         } else {
-            this._render(posts);
+            this.render(posts);
         }
     }
 
-    async _getDemoPosts() {
+    async getDemoPosts() {
         const data = LANDINGPAGE_POLAROIDS.map((p) => {
             const user = LANDINGPAGE_USERS.find((u) => u.id === p.creatorID);
             return {
@@ -25,11 +25,11 @@ export class PolaroidGridComponent {
                 user,
             };
         });
-        this._render(data);
+        this.render(data);
     }
 
-    _render(posts) {
-        this._$root.innerHTML = "";
+    render(posts) {
+        this.$root.innerHTML = "";
 
         const grid = document.createElement("div");
         grid.classList.add("polaroid-grid__container");
@@ -38,16 +38,16 @@ export class PolaroidGridComponent {
             grid.classList.add("polaroid-grid__container--demo");
         }
 
-        const elements = posts.map((post) => this._createPolaroidEl(post));
+        const elements = posts.map((post) => this.createPolaroidEl(post));
 
         elements.forEach((element) => {
             grid.appendChild(element);
         });
 
-        this._$root.appendChild(grid);
+        this.$root.appendChild(grid);
     }
 
-    _createPolaroidEl(polaroid) {
+    createPolaroidEl(polaroid) {
         const el = document.createElement("div");
         el.classList.add("polaroid");
         const image = new Image();

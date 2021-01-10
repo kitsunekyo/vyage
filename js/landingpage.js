@@ -6,18 +6,18 @@ class LoginForm {
 
         $loginForm.addEventListener("submit", (e) => {
             e.preventDefault();
-            this._handleSubmit($loginForm);
+            this.handleSubmit($loginForm);
         });
     }
 
-    _handleSubmit($form) {
+    handleSubmit($form) {
         const formData = new FormData($form);
         const username = formData.get("username");
         const password = formData.get("password");
-        this._login({ username, password });
+        this.login({ username, password });
     }
 
-    async _login(credentials) {
+    async login(credentials) {
         await fetch("/app/auth/login.php", {
             method: "POST",
             body: credentials,
@@ -29,35 +29,35 @@ class LoginForm {
 }
 
 class Tabs {
-    _$tabs;
-    _$links;
+    $tabs;
+    $links;
 
     constructor() {
-        this._$links = document.querySelectorAll("[data-tab-link]");
-        this._$tabs = document.querySelectorAll("[data-tab]");
+        this.$links = document.querySelectorAll("[data-tab-link]");
+        this.$tabs = document.querySelectorAll("[data-tab]");
 
-        this._$links.forEach((link) => {
-            link.addEventListener("click", (e) => this._handleLinkClick(e));
+        this.$links.forEach((link) => {
+            link.addEventListener("click", (e) => this.handleLinkClick(e));
         });
 
-        this._$tabs[0].style.display = "block";
-        this._$links[0].classList.add("tab__header-link--active");
+        this.$tabs[0].style.display = "block";
+        this.$links[0].classList.add("tab__header-link--active");
     }
 
-    _handleLinkClick(e) {
+    handleLinkClick(e) {
         const targetTab = e.target.dataset.tabLink;
 
-        this._$links.forEach((link) => {
+        this.$links.forEach((link) => {
             link.classList.remove("tab__header-link--active");
         });
         e.target.classList.add("tab__header-link--active");
 
-        this._openTab(targetTab);
+        this.openTab(targetTab);
     }
 
-    _openTab(tabName) {
+    openTab(tabName) {
         const tab = document.querySelector(`[data-tab="${tabName}"]`);
-        this._$tabs.forEach((tab) => {
+        this.$tabs.forEach((tab) => {
             tab.style.removeProperty("display");
         });
         tab.style.display = "block";
@@ -65,22 +65,22 @@ class Tabs {
 }
 
 class LandingPageModal {
-    _$body;
+    $body;
 
     constructor() {
-        this._registerLoginModal();
+        this.registerLoginModal();
     }
 }
 
 class Header {
-    _$body;
+    $body;
 
     constructor() {
-        this._registerLoginButton();
-        this._registerLogoutButton();
+        this.registerLoginButton();
+        this.registerLogoutButton();
     }
 
-    async _logout() {
+    async logout() {
         const res = await fetch("/app/auth/logout.php", {
             method: "POST",
         });
@@ -89,40 +89,40 @@ class Header {
         }
     }
 
-    _registerLogoutButton() {
+    registerLogoutButton() {
         const $logout = document.getElementById("logout");
         if (!$logout) return;
 
         $logout.addEventListener("click", (e) => {
             e.preventDefault();
-            this._logout();
+            this.logout();
         });
     }
 
-    _registerLoginButton() {
-        this._$body = document.querySelector("body");
+    registerLoginButton() {
+        this.$body = document.querySelector("body");
 
         const modalButton = document.querySelector('[data-modal-open="login"]');
         if (!modalButton) return;
 
         document.querySelector('[data-modal-open="login"]').addEventListener("click", (e) => {
             e.preventDefault();
-            this._openModal();
+            this.openModal();
         });
 
         document.querySelector(".overlay").addEventListener("click", (e) => {
-            this._closeModal();
+            this.closeModal();
         });
     }
 
-    _openModal() {
-        this._$body.classList.add("show-overlay");
-        this._$body.classList.add("show-modal");
+    openModal() {
+        this.$body.classList.add("show-overlay");
+        this.$body.classList.add("show-modal");
     }
 
-    _closeModal() {
-        this._$body.classList.remove("show-overlay");
-        this._$body.classList.remove("show-modal");
+    closeModal() {
+        this.$body.classList.remove("show-overlay");
+        this.$body.classList.remove("show-modal");
     }
 }
 
