@@ -1,11 +1,31 @@
+import { LANDINGPAGE_POLAROIDS, LANDINGPAGE_USERS } from "./constants.js";
+
 export class PolaroidGridComponent {
     _$root;
+    _isDemo = false;
 
-    constructor(rootId) {
+    constructor(rootId, isDemo = false) {
         this._$root = document.getElementById(rootId);
         this._$root.innerHTML = "";
 
-        this._loadPosts();
+        this._isDemo = isDemo;
+
+        if (isDemo) {
+            this._getDemoPosts();
+        } else {
+            this._loadPosts();
+        }
+    }
+
+    async _getDemoPosts() {
+        const data = LANDINGPAGE_POLAROIDS.map((p) => {
+            const user = LANDINGPAGE_USERS.find((u) => u.id === p.creatorID);
+            return {
+                ...p,
+                user,
+            };
+        });
+        this._render(data);
     }
 
     async _loadPosts() {
@@ -21,6 +41,10 @@ export class PolaroidGridComponent {
 
         const grid = document.createElement("div");
         grid.classList.add("polaroid-grid__container");
+
+        if (this._isDemo) {
+            grid.classList.add("polaroid-grid__container--demo");
+        }
 
         const elements = posts.map((post) => this._createPolaroidEl(post));
 
@@ -46,9 +70,9 @@ export class PolaroidGridComponent {
             <div class="polaroid__meta">
                 <div class="polaroid__user">
                     <div class="polaroid__avatar">
-                        <img src="${polaroid.creatorID}" alt="${polaroid.creatorID}">
+                        <img src="${polaroid.user.profilePic}" alt="${polaroid.user.username}">
                     </div>
-                    <div class="polaroid__username">${polaroid.creatorID}</div>
+                    <div class="polaroid__username">${polaroid.user.username}</div>
                 </div>
                 <div class="polaroid__details">
                     <h3>${polaroid.country}</h3>

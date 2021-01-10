@@ -137,12 +137,12 @@ em {
 
 .polaroid-grid__container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     grid-gap: 2rem;
     padding: 3rem 0;
 }
 
-.polaroid-grid__container > .polaroid:nth-child(even) {
+.polaroid-grid__container.polaroid-grid__container--demo > .polaroid:nth-child(even) {
     transform: translateY(-2rem);
 }
 
