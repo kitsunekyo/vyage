@@ -169,6 +169,7 @@ em {
     width: 100%;
     background: #fff;
     padding: 2%;
+    border-radius: 5px;
 }
 
 .polaroid__image {
