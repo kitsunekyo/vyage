@@ -29,7 +29,7 @@ $pathName = $_SERVER['REQUEST_URI'];
         <input type="hidden" name="creatorID" value="<?= $creatorID ?>">
         <div class="form-group">
             <label for="title">Title</label>
-            <input type="text" class="form-control" name="title">
+            <input type="text" class="form-control" name="title" value="Demo Title">
         </div>
         <div class="form-group">
             <label for="country">Country</label>
@@ -45,7 +45,7 @@ $pathName = $_SERVER['REQUEST_URI'];
         </div>
         <div class="form-group">
             <label for="description">Description</label>
-            <textarea name="description" class="form-control"></textarea>
+            <textarea name="description" class="form-control">some description as dummy</textarea>
         </div>
         <input type="file" name="coverImg">
         <input type="file" name="images[]" multiple>

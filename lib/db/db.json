@@ -201,6 +201,15 @@
             "categoryID": 2,
             "description": "asdf",
             "coverImg": "\/uploads\/5ffb27f4ac128.jpeg"
+        },
+        {
+            "postID": "5ffb35b6a9806",
+            "creatorID": 1,
+            "title": "Demo Title",
+            "country": "Greece",
+            "categoryID": 4,
+            "description": "some description as dummy",
+            "coverImg": "\/uploads\/5ffb35b6a9836.png"
         }
     ]
 }
