@@ -19,6 +19,7 @@ rarely any. this is just for the sake of playing around with php. and i'd never 
 -   for simplicity file database is not cached or thought about at all. otherwise at least limit the amounts of serializations and file access (keep in memory)
 -   endpoints are not secured, session is just to sketch out a basic login state
 -   little to no error handling
+-   most input fields are prefilled, for simplicity
 -   using ESM javascript modules, to simplify javascript handling
 -   using classes -> using classes was one of the requirements, i wanted to keep. I really dislike OOP javascript, but want to confirm from time to time
 -   javascript render optimization: there's a lot of DOM writes, which would normally hurt performance. for this project i dont care
