@@ -1,4 +1,4 @@
-<?php include('./lib/partials/head.php'); ?>
+<?php include('./../app/partials/head.php'); ?>
 
 <div class="bg-landing"></div>
 <header class="header">
@@ -53,4 +53,4 @@
 </div>
 
 <script src="js/landingpage.js" type="module"></script>
-<?php include('./lib/partials/footer.php');
+<?php include('./../app/partials/footer.php');

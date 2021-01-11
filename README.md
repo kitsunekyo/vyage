@@ -8,18 +8,19 @@ as vanilla as possible, no frameworks of utils. this is a hackathon style projec
 
 ## 📦 start
 
-run the php dev server: `php -S localhost:8080` (requires php cli to be installed locally)
+run the php dev server, and serve the public directory: `php -S localhost:8080 -t ./public` (requires php cli to be installed locally)
 
 ## 🎓 issues / compromises / decisions
 
-rarely any. this is just for the sake of playing around with php. and i'd never put this project live.
+this is just for the sake of playing around with php.
 
--   routes are close to the root, due to the lack of routing (full file path is visible to the user) -> api, auth, index.php, ...
--   non pages / endpoints are located in `lib`
--   for simplicity file database is not cached or thought about at all. otherwise at least limit the amounts of serializations and file access (keep in memory)
--   endpoints are not secured, session is just to sketch out a basic login state
+-   `public` is served, to prevent direct access to non-page and non-endpoint resources
+-   app internals are located in `app`
+-   for simplicity sakes, the file database is not cached or thought about at all. using a json file was a requirement.  
+    with more time i'd at least limit the amounts of serializations and file access (keep in memory)
+-   endpoints are _not secured_, session is just to sketch out a basic login state
 -   little to no error handling
--   most input fields are prefilled, for simplicity
--   using ESM javascript modules, to simplify javascript handling
--   using classes -> using classes was one of the requirements, i wanted to keep. I really dislike OOP javascript, but want to confirm from time to time
+-   most input fields are prefilled, to easy development / manual testing
+-   using ESM javascript modules, to simplify javascript handling -> should be bundled and minified in prod
+-   using js classes -> using classes was one of the requirements, I wanted to keep, just because I usually write everything functional
 -   javascript render optimization: there's a lot of DOM writes, which would normally hurt performance. for this project i dont care

@@ -168,7 +168,7 @@
     "posts": [
         {
             "postID": "5ffb216300515",
-            "creatorID": "1",
+            "creatorID": 1,
             "title": "Some Post",
             "country": "Italy",
             "categoryID": null,
@@ -177,7 +177,7 @@
         },
         {
             "postID": "5ffb21e97508e",
-            "creatorID": "1",
+            "creatorID": 1,
             "title": "Another day in the sun",
             "country": "USA",
             "categoryID": "3",
@@ -186,10 +186,10 @@
         },
         {
             "postID": "5ffb225110916",
-            "creatorID": "1",
+            "creatorID": 1,
             "title": "new title",
             "country": "Turkey",
-            "categoryID": "1",
+            "categoryID": 1,
             "description": "asljkdf",
             "coverImg": "\/uploads\/5ffb225110918.png"
         },
@@ -210,6 +210,24 @@
             "categoryID": 4,
             "description": "some description as dummy",
             "coverImg": "\/uploads\/5ffb35b6a9836.png"
+        },
+        {
+            "postID": "5ffb370bd3ae0",
+            "creatorID": 1,
+            "title": "Boating",
+            "country": "Italy",
+            "categoryID": 5,
+            "description": "some description as dummy",
+            "coverImg": "\/uploads\/5ffb370bd3ae4.jpg"
+        },
+        {
+            "postID": "5ffb3b44e96ba",
+            "creatorID": 1,
+            "title": "Hello Friends",
+            "country": "Italy",
+            "categoryID": 3,
+            "description": "some description as dummy",
+            "coverImg": "\/uploads\/5ffb3b44e96bc.jpg"
         }
     ]
 }

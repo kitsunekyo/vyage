@@ -1,5 +1,5 @@
 <?php
-require_once('./../lib/db/db.php');
+require_once('./../../app/db/db.php');
 session_start();
 
 $method = $_SERVER["REQUEST_METHOD"];
