@@ -1,4 +1,4 @@
-# Voyage travel
+# Voyage travel (forked, and rewritten)
 
 as vanilla as possible, no frameworks of utils. this is a hackathon style project, to see how far I could get with little to no time invested.
 
