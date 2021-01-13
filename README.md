@@ -2,7 +2,7 @@
 
 as vanilla as possible, no frameworks of utils. this is a hackathon style project, to see how far I could get with little to no time invested.
 
-> design is not my own. was created by a colleague of a friend for their project
+> design is not my own. was created by a colleague of a friend for their project (forked, and rewritten)
 
 ![screenshot](./screenshot.png)
 
