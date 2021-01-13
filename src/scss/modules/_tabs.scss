@@ -1,0 +1,26 @@
+/* tabs */
+.tabs__header {
+    display: flex;
+}
+
+.tab {
+    display: none;
+    margin: 0 auto;
+    padding: 0 3rem 5rem;
+
+    &__container {
+    }
+
+    &__header-link {
+        width: 100%;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--grey-light);
+    }
+
+    &__header-link.tab__header-link--active {
+        background-color: #fff;
+    }
+}

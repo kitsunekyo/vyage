@@ -22,7 +22,7 @@ switch($method) {
 
         $_SESSION["username"] = $user[0]["username"];
         $_SESSION["userId"] = $user[0]["id"];
-        header("Location: /home.php");
+        header("Location: /dashboard");
 
         break;
     default:

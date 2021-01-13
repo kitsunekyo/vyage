@@ -1,0 +1,18 @@
+/* main nav */
+.nav {
+    font-family: var(--font);
+    margin-left: auto;
+
+    > :not(:last-child) {
+        margin-right: 1.5rem;
+    }
+
+    a {
+        font-weight: 600;
+        color: var(--text-color-light);
+
+        &:hover {
+            color: var(--text-color);
+        }
+    }
+}

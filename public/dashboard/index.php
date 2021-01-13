@@ -1,12 +1,12 @@
 <?php 
-include('./../app/partials/head.php');
+include('./../../app/partials/head.php');
 $creatorID = $_SESSION["userId"];
 $pathName = $_SERVER['REQUEST_URI'];
 ?>
 
 <div class="dashboard">
-    <?php include('./../app/partials/sidebar.php') ?>
-    <div class="main">
+    <?php include('./../../app/partials/sidebar.php') ?>
+    <main class="main">
         <secion class="search">
             <input type="text" class="form-control category-search" placeholder="Search Posts">
         </secion>
@@ -20,7 +20,7 @@ $pathName = $_SERVER['REQUEST_URI'];
         <section class="posts">
             <div id="posts-grid"></div>
         </section>
-    </div>
+    </main>
 </div>
 <div class="overlay"></div>
 <div class="modal create-new-post-modal" data-modal="create-post" style="padding: 1rem;">
@@ -56,4 +56,4 @@ $pathName = $_SERVER['REQUEST_URI'];
 </div>
 
 <script src="/js/dashboard.js" type="module"></script>
-<?php include('./../app/partials/footer.php');
+<?php include('./../../app/partials/footer.php');

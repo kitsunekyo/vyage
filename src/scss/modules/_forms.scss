@@ -1,0 +1,23 @@
+/* forms */
+.form-group {
+    margin-bottom: 1rem;
+    label {
+        display: inline-block;
+        margin-bottom: 0.5rem;
+    }
+}
+
+.form-control {
+    outline: none;
+    border: solid 1px var(--grey-light);
+    border-radius: 5px;
+    padding: 0.75rem;
+    background-color: #fafafa;
+    display: block;
+    width: 100%;
+    transition: border-color 0.1s ease;
+
+    &:focus {
+        border-color: var(--color-primary);
+    }
+}

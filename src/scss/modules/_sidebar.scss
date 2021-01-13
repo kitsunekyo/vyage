@@ -1,0 +1,49 @@
+.sidebar {
+    flex-grow: 1;
+    width: 70px;
+    background-color: #fff;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    padding: 1rem 0.25rem;
+
+    &-nav {
+        margin-top: auto;
+
+        &__item {
+            width: 45px;
+            height: 45px;
+            background-color: var(--grey-light);
+            display: grid;
+            place-items: center;
+            overflow: hidden;
+            border-radius: 50%;
+            padding: 0.5rem;
+            color: var(--text-color);
+            transition: background-color 0.1s ease;
+            cursor: pointer;
+
+            path {
+                stroke-width: 1.3px;
+            }
+
+            > img {
+                width: 100%;
+                height: auto;
+            }
+
+            &:hover {
+                background-color: #cfcfcf;
+            }
+
+            &:not(:last-child) {
+                margin-bottom: 1rem;
+            }
+
+            &.sidebar-nav__item--active {
+                background-color: var(--color-primary);
+                color: #fff;
+            }
+        }
+    }
+}

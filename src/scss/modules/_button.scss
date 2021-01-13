@@ -1,0 +1,23 @@
+/* button styles */
+.button {
+    font: inherit;
+    outline: none;
+    border: none;
+    border-radius: 1.5rem;
+    padding: 0.75rem 1rem;
+    font-weight: 600;
+    color: #fff;
+    background-color: var(--color-primary);
+    cursor: pointer;
+    min-width: 100px;
+}
+
+.button:not(:disabled):hover {
+    background-color: var(--color-primary-light);
+}
+
+.button:disabled {
+    /* background-color: var(--text-color-light); */
+    cursor: initial;
+    opacity: 0.5;
+}

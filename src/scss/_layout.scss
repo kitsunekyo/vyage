@@ -1,0 +1,75 @@
+.main {
+    padding-bottom: 10rem;
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+}
+
+.logo {
+    font-family: "Dancing Script";
+    color: #fff;
+    background-color: var(--grey-dark);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 2rem;
+    display: grid;
+    place-content: center;
+}
+
+/* landing page */
+.bg-landing {
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 0.3;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    background-image: url("/img/stock/background.jpg");
+    background-size: cover;
+    background-position: center top;
+}
+
+/* hero */
+.hero-title {
+    font-size: 2.3rem;
+    text-align: center;
+    font-weight: 600;
+    margin: 6rem 4rem 10rem;
+    line-height: 1.3;
+}
+
+/* ----------- dashboard ----------- */
+.dashboard {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+}
+
+.dashboard > .main {
+    flex-grow: 1;
+    overflow: hidden;
+    border-radius: 1rem;
+    width: 100%;
+    background-color: var(--grey-dark);
+    color: #fff;
+    margin: 0.5rem 0.5rem 0.5rem 0;
+    padding: 2rem;
+    display: flex;
+    flex-flow: column;
+}
+
+.posts {
+    overflow-y: scroll;
+    color: #fff;
+}
+
+/* create new post modal */
+.create-new-post-modal {
+    width: 500px;
+}

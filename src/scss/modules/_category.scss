@@ -1,0 +1,51 @@
+.category-filter {
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+.category-title {
+    font-size: 1.25rem;
+    margin: 1rem 0;
+}
+/* travel category nav */
+.category-nav {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    &__item {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        cursor: pointer;
+        border-radius: 5px;
+        padding: 0.5rem;
+        width: 110px;
+
+        span {
+            margin-top: 0.5rem;
+            text-align: center;
+        }
+
+        &.category-nav__item--active {
+            background-color: var(--grey);
+        }
+    }
+
+    &__icon {
+        width: 80px;
+        height: 80px;
+        background-color: #fff;
+        border-radius: 50%;
+        padding: 20%;
+
+        img {
+            height: 100%;
+            width: auto;
+        }
+    }
+    // button to clear the category selection
+    &__clear {
+        margin: 1rem 0 0;
+    }
+}
