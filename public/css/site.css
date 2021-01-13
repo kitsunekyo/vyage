@@ -353,6 +353,7 @@ body.show-overlay .overlay {
 
 .posts {
     overflow-y: scroll;
+    color: #fff;
 }
 
 /* sidebar */
