@@ -15,7 +15,7 @@ $pathName = $_SERVER['REQUEST_URI'];
             <nav class="category-nav">
                 <!-- render category nav here -->
             </nav>
-            <button class="button category-nav__clear">Clear Filter</button>
+            <button class="button category-nav__clear" disabled>Clear Filter</button>
         </section>
         <section class="posts">
             <div id="posts-grid"></div>

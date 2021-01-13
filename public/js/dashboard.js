@@ -9,7 +9,10 @@ class DashboardComponent {
         this.polaroidGrid = new PolaroidGridComponent("posts-grid", this.posts);
 
         document.querySelector(".category-search").addEventListener("change", (e) => {
-            this.filterPosts(["title", "country"], e.target.value);
+            const searchValue = e.target.value;
+            this.clearFilter();
+            this.filterPosts(["title", "country"], searchValue);
+            e.target.value = searchValue; // reset value as clearFilter deletes it
         });
 
         this.renderCategoryFilter();
@@ -31,11 +34,14 @@ class DashboardComponent {
                 return val && val.match(regex) ? true : false;
             })
         );
-
+        document.querySelector(".category-nav__clear").removeAttribute("disabled");
         this.polaroidGrid.render(filteredPosts);
     }
 
     clearFilter() {
+        document.querySelector(".category-search").value = "";
+        document.querySelector(".category-nav__clear").setAttribute("disabled", "");
+        this.resetCategoryNavItemClasses();
         this.polaroidGrid.render(this.posts);
     }
 
@@ -46,7 +52,6 @@ class DashboardComponent {
         });
 
         document.querySelector(".category-nav__clear").addEventListener("click", (e) => {
-            this.resetCategoryNavItemClasses();
             this.clearFilter();
         });
     }
@@ -62,8 +67,7 @@ class DashboardComponent {
             `;
 
         $item.addEventListener("click", (e) => {
-            this.resetCategoryNavItemClasses();
-
+            this.clearFilter();
             e.currentTarget.classList.add("category-nav__item--active");
             this.filterPosts(["categoryID"], parseInt(category.categoryID));
         });
