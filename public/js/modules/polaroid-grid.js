@@ -35,6 +35,10 @@ export class PolaroidGridComponent {
             grid.classList.add("polaroid-grid__container--demo");
         }
 
+        if (posts.length <= 0) {
+            this.$root.innerHTML = "No posts found";
+        }
+
         const elements = posts.map((post) => this.createPolaroidEl(post));
 
         elements.forEach((element) => {
